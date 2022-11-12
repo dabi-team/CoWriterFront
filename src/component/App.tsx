@@ -22,10 +22,6 @@ function App() {
     window.open(data)
     console.log(data)
   }
-  useEffect(() => {
-    console.log('download');
-    openurl();
-  }, [data]);
 
   const onSubmit =async (event: any) => {
     // window.open('https://s3.ap-south-1.amazonaws.com/prashantm2001.temp/upload/hxhjslitwv.docx', '_blank')
