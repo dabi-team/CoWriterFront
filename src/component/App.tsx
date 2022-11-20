@@ -11,6 +11,7 @@ function App() {
     result: '',
     abstract: '',
     conclusion: '',
+    format: 0,
   }
   const [form, setData] = useState(ini)
 
@@ -40,6 +41,13 @@ function App() {
         Cowriter
       </div>
       <div className='rounded overflow-hidden shadow-lg bg-gray-900 text-left px-6 py-4'>
+    <div className="mb-6">
+      <label htmlFor="Format" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Document Format</label>
+      <select id="Format" onChange={onChange} name="format" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 py-3">
+        <option className='text-xl m-3 py-4' value="0" selected>KJSEIT Format</option>
+        <option className='text-xl m-3 py-4' value="1" >IEEE Format</option>
+      </select>
+    </div>
     <div className="mb-6">
       <label htmlFor="Title" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Title</label>
       <textarea id="Title" onChange={onChange} name="title" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" />

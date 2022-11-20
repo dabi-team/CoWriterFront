@@ -7,6 +7,7 @@ export interface form {
   introduction: string;
   result: string;
   conclusion: string;
+  format: number;
  }
 
 export const formApiSlice = createApi({
